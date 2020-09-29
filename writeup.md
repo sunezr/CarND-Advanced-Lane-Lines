@@ -110,12 +110,15 @@ Plot lane area, then unwarp the image and add text on it.
 
 ### Pipeline (video)
 
+I used a Line class to record recent line parameters and used the mean of last 5 frames as current line.
+
 Here's a [link to my video result](./project_output_video.mp4)
 
 ---
 
 ### Discussion
 
-- I don't know what is the distance ratio of real world and image. I just take the the values given in lecture. But I think there should be a method to calculate it.
-- I didn't consider the failure of detection and the validation of result. It should be added to make the program robust.
+- Mean of recent fit line in frames is used to make the lane finding more robust.
+- The combination of threshold to get binary image is somewhat simple, more methods can be applied to detect lane lines.
+- I didn't consider the failure of detection or the validation of result. It should be considered to reduce error.
 
